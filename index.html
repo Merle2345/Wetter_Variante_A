@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TretNow | Trettbootverleih</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🚤 TretNow
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Start</a></li>
+                <li><a href="#weather">Wetter</a></li>
+                <li><a href="#boats">Boote</a></li>
+                <li><a href="#about">Über Uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+
+            <button class="book-btn">
+                Jetzt buchen
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🌊 Modernster Trettboot-Verleih am See
+            </span>
+
+            <h1>
+                Raus aufs Wasser.<br>
+                Rein ins Abenteuer.
+            </h1>
+
+            <p>
+                Miete dein Trettboot in wenigen Sekunden und genieße
+                einen unvergesslichen Tag auf dem Wasser.
+                Spontan, digital und wetteroptimiert.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">
+                    Jetzt starten
+                </button>
+
+                <button class="secondary-btn">
+                    Live Wetter
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="glass-card hero-weather-preview">
+
+                <h3>Aktuelles Wetter</h3>
+
+                <div class="temp" id="heroTemp">
+                    ☀️
+                </div>
+
+                <div class="condition">
+                    Perfektes Wetter zum Trettbootfahren
+                </div>
+
+                <div class="weather-small-info">
+                    <span>🌡️ Live Wetterdaten</span>
+                    <span>🌊 Wetterampel</span>
+                    <span>📍 Standortbasiert</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WETTER DASHBOARD -->
+
+    <section class="weather-section" id="weather">
+
+        <div class="section-title">
+            <h2>Live Wetter Dashboard</h2>
+            <p>
+                Aktuelle Wetterbedingungen für deinen Ausflug.
+            </p>
+        </div>
+
+        <div class="weather-search">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Stadt eingeben...">
+
+            <button id="searchBtn">
+                Suchen
+            </button>
+
+        </div>
+
+        <div class="weather-grid">
+
+            <div class="weather-card current-weather">
+
+                <h3>Aktuelles Wetter</h3>
+
+                <div id="temperature">
+                    --°C
+                </div>
+
+                <p id="description">
+                    Wetter wird geladen...
+                </p>
+
+            </div>
+
+            <div class="weather-card">
+                <h3>Gefühlte Temperatur</h3>
+                <p id="feelsLike">--°C</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Wind</h3>
+                <p id="windSpeed">-- km/h</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Luftfeuchtigkeit</h3>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>UV Index</h3>
+                <p id="uvIndex">--</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Regenrisiko</h3>
+                <p id="rainChance">--%</p>
+            </div>
+
+        </div>
+
+        <div class="forecast-wrapper">
+
+            <h3>7-Tage Vorhersage</h3>
+
+            <div id="forecastContainer" class="forecast-container">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOOTE -->
+
+    <section class="boats" id="boats">
+
+        <div class="section-title">
+
+            <h2>Unsere Boote</h2>
+
+            <p>
+                Für jedes Abenteuer das passende Boot.
+            </p>
+
+        </div>
+
+        <div class="boat-grid">
+
+            <div class="boat-card">
+
+                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80"
+                    alt="Classic Boot">
+
+                <h3>🚤 Classic</h3>
+
+                <p>
+                    Perfekt für 2 Personen.
+                </p>
+
+                <span>15€/Stunde</span>
+
+            </div>
+
+            <div class="boat-card">
+
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=80"
+                    alt="Family Boot">
+
+                <h3>🌊 Family</h3>
+
+                <p>
+                    Bis zu 5 Personen.
+                </p>
+
+                <span>22€/Stunde</span>
+
+            </div>
+
+            <div class="boat-card">
+
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80"
+                    alt="Premium Boot">
+
+                <h3>☀️ Premium</h3>
+
+                <p>
+                    Mit Sonnendach und Premium-Sitzen.
+                </p>
+
+                <span>30€/Stunde</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="about" id="about">
+
+        <div class="section-title">
+
+            <h2>Warum TretNow?</h2>
+
+        </div>
+
+        <div class="features">
+
+            <div class="feature-card">
+                ⚡ Sofortbuchung
+            </div>
+
+            <div class="feature-card">
+                🌤 Live Wetter
+            </div>
+
+            <div class="feature-card">
+                💳 Online Bezahlung
+            </div>
+
+            <div class="feature-card">
+                🚤 Moderne Boote
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALERIE -->
+
+    <section class="gallery">
+
+        <div class="section-title">
+
+            <h2>Erlebnisse auf dem Wasser</h2>
+
+            <p>
+                Gemacht für Freunde, Sommer und Abenteuer.
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+                alt="See">
+
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+                alt="Wasser">
+
+            <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=800&q=80"
+                alt="Boot">
+
+            <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80"
+                alt="Natur">
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta-section">
+
+        <div class="cta-card">
+
+            <h2>
+                Bereit für dein nächstes Abenteuer?
+            </h2>
+
+            <p>
+                Reserviere jetzt dein Trettboot und genieße den schönsten
+                Tag auf dem Wasser.
+            </p>
+
+            <button class="primary-btn">
+                Jetzt buchen
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <h3>TretNow</h3>
+
+            <p>
+                Nachhaltige Freizeit auf dem Wasser.
+                Modern, unkompliziert und digital.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 TretNow. Alle Rechte vorbehalten.
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
